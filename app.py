@@ -456,7 +456,7 @@ elif section == SECTIONS[5]:
     df["Accuracy"] = (df["Correct"] / df["Total"] * 100).round(2)
     df["Accuracy %"] = df["Accuracy"].apply(lambda x: f"{x:.2f}%")
     st.dataframe(
-        df[["Class", "Correct", "Total", "Accuracy %"]].sort_values("Accuracy", ascending=False).reset_index(drop=True),
+        df[["Class", "Correct", "Total", "Accuracy %"]].sort_values("Accuracy %", ascending=False).reset_index(drop=True),
         hide_index=True,
         width="stretch",
     )
